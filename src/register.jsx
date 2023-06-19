@@ -20,8 +20,8 @@ export const Register = (props) =>{
             
             <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Your email" id="email"/>
             
-            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password"/>
-            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="confirm-password"/>
+            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="Password" id="password"/>
+            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="Confirm Password" id="confirm-password"/>
             <button type="submit">Sign up</button>
         </form>
         <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
@@ -29,3 +29,5 @@ export const Register = (props) =>{
         </div>
     )
 }
+
+export default Register;

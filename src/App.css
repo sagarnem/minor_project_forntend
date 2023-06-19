@@ -32,7 +32,8 @@
   color: #61dafb;
 }
 
-form-container, .login-form{
+form-container,
+.login-form {
   width: 300px;
   margin: 18vh auto;
   padding: 20px;
@@ -41,7 +42,8 @@ form-container, .login-form{
   box-shadow: 0 2px 4px rgba(22, 13, 1, 0.541);
 }
 
-form-container, .register-form{
+form-container,
+.register-form {
   width: 400px;
   margin: 65px auto;
   padding: 20px;
@@ -55,8 +57,7 @@ h1 {
   color: #002147;
 }
 
-
-input{
+input {
   width: 92%;
   padding: 10px;
   margin-bottom: 15px;
@@ -64,7 +65,7 @@ input{
   border-radius: 4px;
 }
 
-button{
+button {
   width: 92%;
   padding: 10px;
   margin-bottom: 15px;
@@ -76,10 +77,9 @@ button:hover {
   background-color: #ff6600;
 }
 
-.link-btn{
+.link-btn {
   background: none;
   text-decoration: underline;
-
 }
 
 @keyframes App-logo-spin {
