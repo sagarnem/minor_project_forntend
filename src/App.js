@@ -4,6 +4,8 @@ import './App.css';
 import { Login } from './Login';
 import { Register } from './Register';
 import Upload from './Upload';
+import Home from './Home';
+import Contact from './Contact';
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -14,10 +16,13 @@ function App() {
 
   return (
     <div className="App">
-      <Upload />
+      <div><Upload /></div>
+      
       {
         currentForm == "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
       }
+
+      <Contact />
     </div>
   );
 }
