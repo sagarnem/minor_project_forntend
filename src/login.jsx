@@ -25,7 +25,9 @@ function Login() {
         <input type="password" placeholder="Password" id="password" />
         <button type="submit">Log In</button>
       </form>
-      <Link to="/signup">Don't have an account? Register here</Link>
+      <Link to="/signup" className="link-btn">
+        Don't have an account? Register here
+      </Link>
     </div>
   );
 }

@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 header {
@@ -20,9 +21,7 @@ header {
   color: #333;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
-  gap: 2 rem;
-  padding: 0 1rem;
+  align-items: center;
 }
 
 .nav ul {
@@ -30,7 +29,7 @@ header {
   margin: 0;
   list-style: none;
   display: flex;
-  gap: 1rem;
+  padding: 5px 20px 4px 20px;
 }
 
 .nav a {
@@ -39,7 +38,7 @@ header {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0.25rem;
+  padding: 5px 20px 4px 20px;
 }
 
 .nav li:active {
@@ -53,4 +52,6 @@ header {
   color: #fff;
   border-bottom: 4px solid;
   border-color: #ff6600;
+  border-radius: 2px;
+  transition: background-color 0.5s;
 }

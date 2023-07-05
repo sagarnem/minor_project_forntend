@@ -18,7 +18,10 @@ function Register() {
         />
         <button type="submit">Sign up</button>
       </form>
-      <Link to="/login"> Already have an account? Register here</Link>
+      <Link to="/login" className="link-btn">
+        {" "}
+        Already have an account? Register here
+      </Link>
     </div>
   );
 }
