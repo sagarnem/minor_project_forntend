@@ -1,28 +1,32 @@
-import { Link } from "react-router-dom";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import React from "react";
+import logo from "./logo.png";
 
 function Navbar() {
   return (
-    <nav className="nav">
-      <Link to="/" className="site-logo">
-        Logo
-      </Link>
-      <ul>
-        <CustomLink to="/upload">Upload</CustomLink>
-        <CustomLink to="/contact">Contact</CustomLink>
-        <CustomLink to="/login">Login</CustomLink>
-        <CustomLink to="/signup">Signup</CustomLink>
-      </ul>
-    </nav>
+    <header>
+      <nav className="nav">
+        <Link to="/" className="site-logo">
+          <img src={logo} alt="logo" className="logo" />
+        </Link>
+        <ul>
+          <CustomLink to="/upload">Upload</CustomLink>
+          <CustomLink to="/contact">Contact</CustomLink>
+
+          <CustomLink to="/login">Login</CustomLink>
+          <CustomLink to="/signup">Signup</CustomLink>
+        </ul>
+      </nav>
+    </header>
   );
 }
 
-function CustomLink({ href, children, ...props }) {
-  const path = window.location.pathname;
-
+function CustomLink({ to, children, ...props }) {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
   return (
-    <li className={path === href ? "active" : ""}>
-      <Link href={href} {...props}>
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} {...props}>
         {children}
       </Link>
     </li>

@@ -6,12 +6,21 @@ body {
   margin: 0;
 }
 
+header {
+  background-color: #fff;
+  color: #333;
+}
+.logo {
+  height: 50px;
+  width: 60px;
+}
+
 .nav {
-  background-color: #333;
-  color: white;
+  background-color: #fff;
+  color: #333;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   gap: 2 rem;
   padding: 0 1rem;
 }
@@ -34,9 +43,14 @@ body {
 }
 
 .nav li:active {
-  background-color: #555;
+  background-color: #002147;
+  color: #fff;
+  border-top: 4px solid orangered;
 }
 
 .nav li:hover {
-  background-color: #777;
+  background-color: #002147;
+  color: #fff;
+  border-bottom: 4px solid;
+  border-color: #ff6600;
 }
