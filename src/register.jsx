@@ -1,33 +1,26 @@
-import React, {useState} from "react"
+import React from "react";
+import { Link } from "react-router-dom";
 
-export const Register = (props) =>{
-    const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
-    const [name, setName] = useState('');
-
-    const handleSubmit = (e) =>{
-        e.preventDefault();
-        console.log(email);
-    }
-
-
-    return (
-        <div className="form-container">
-            
-        <form className="register-form" onSubmit={handleSubmit}>
+function Register() {
+  return (
+    <div className="form-container">
+      <form className="register-form">
         <h1> Sign up </h1>
-            <input value={name} name="name" id="name" placeholder="Full name" type="text" />
-            
-            <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Your email" id="email"/>
-            
-            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="Password" id="password"/>
-            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="Confirm Password" id="confirm-password"/>
-            <button type="submit">Sign up</button>
-        </form>
-        <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
-        
-        </div>
-    )
+        <input name="name" id="name" placeholder="Full name" type="text" />
+
+        <input type="email" placeholder="Your email" id="email" />
+
+        <input type="password" placeholder="Password" id="password" />
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          id="confirm-password"
+        />
+        <button type="submit">Sign up</button>
+      </form>
+      <Link to="/login"> Already have an account? Register here</Link>
+    </div>
+  );
 }
 
 export default Register;
