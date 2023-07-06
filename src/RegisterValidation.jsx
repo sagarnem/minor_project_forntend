@@ -4,6 +4,12 @@ function Validation(values) {
   const password_pattern =
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 
+  if (values.name === "") {
+    error.name = "name should not be empty";
+  } else {
+    error.name = "";
+  }
+
   if (values.email === "") {
     error.email = "email should not be empty";
   } else if (email_pattern.test(values.email)) {
@@ -18,6 +24,15 @@ function Validation(values) {
     error.password = "";
   } else {
     error.password =
+      "passworld should contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character";
+  }
+
+  if (values.cpassword === "") {
+    error.cpassword = "password should not be empty";
+  } else if (password_pattern.test(values.password)) {
+    error.cpassword = "";
+  } else {
+    error.cpassword =
       "passworld should contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character";
   }
   return error;
