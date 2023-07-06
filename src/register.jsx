@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Validation from "./LoginValidation";
+import Validation from "./RegisterValidation";
 
 function Register() {
   const [values, setValues] = useState({
@@ -26,26 +26,24 @@ function Register() {
         <h1> Sign up </h1>
         <input
           name="name"
-          id="name"
           placeholder="Full name"
           type="text"
           onChange={handleInput}
         />
+        {errors.name && <span className="text-danger">{errors.name}</span>}
 
         <input
           name="email"
           type="email"
           placeholder="Your email"
-          id="email"
           onChange={handleInput}
         />
         {errors.email && <span className="text-danger">{errors.email}</span>}
 
         <input
-          name="cpassword"
+          name="password"
           type="password"
           placeholder="Password"
-          id="password"
           onChange={handleInput}
         />
         {errors.password && (
@@ -55,7 +53,6 @@ function Register() {
           name="cpassword"
           type="password"
           placeholder="Confirm Password"
-          id="cpassword"
           onChange={handleInput}
         />
         {errors.cpassword && (

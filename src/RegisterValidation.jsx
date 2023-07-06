@@ -27,13 +27,10 @@ function Validation(values) {
       "passworld should contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character";
   }
 
-  if (values.cpassword === "") {
-    error.cpassword = "password should not be empty";
-  } else if (password_pattern.test(values.password)) {
+  if (values.password === values.cpassword) {
     error.cpassword = "";
   } else {
-    error.cpassword =
-      "passworld should contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character";
+    error.cpassword = "password didnt match";
   }
   return error;
 }
