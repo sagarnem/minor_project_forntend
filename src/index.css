@@ -86,14 +86,15 @@ header {
 }
 
 .slider:nth-child(1) {
-  background-color: #3498db; /* Light Blue */
+  background: linear-gradient(135deg, #3498db, #8e44ad); 
 }
 
 .slider:nth-child(2) {
-  background-color: #2ecc71; /* Green */
+  background: linear-gradient(160deg, #33ff57, #33ffab); 
 }
 
 .slider:nth-child(3) {
-  background-color: #e74c3c; /* Pink */
+  background: linear-gradient(to right, #5733ff, #ab33ff); 
 }
+
 
