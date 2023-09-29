@@ -58,3 +58,42 @@ header {
   border-radius: 2px;
   transition: background-color 0.5s;
 }
+
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  height: 100vh; /* Make the slider full height */
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.slider {
+  min-width: 100%;
+  height: 100%;
+
+}
+
+
+.slider {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  
+}
+
+.slider:nth-child(1) {
+  background-color: #3498db; /* Light Blue */
+}
+
+.slider:nth-child(2) {
+  background-color: #2ecc71; /* Green */
+}
+
+.slider:nth-child(3) {
+  background-color: #e74c3c; /* Pink */
+}
+
