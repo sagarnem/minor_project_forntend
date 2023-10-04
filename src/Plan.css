@@ -1,0 +1,50 @@
+.plan-section {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .plan-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .plan-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .plan-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .plan-card p {
+    margin: 5px 0;
+  }
+  
+  .plan-card ul {
+    text-align: left;
+    margin: 10px 0;
+    padding-left: 0;
+  }
+  
+  .plan-card li {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .btn {
+    background-color: #002147;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #ff6600;
+  }
+  

@@ -1,30 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import './index.css';
+import React, { useState, useEffect } from "react";
+import "./home.css";
 
 const sliderContent = [
   {
-    title: 'Secure file storage',
+    title: "Secure file storage",
     description:
-      'Store your files in a highly secure environment with advanced encryption technology.',
+      "Store your files in a highly secure environment with advanced encryption technology.",
   },
   {
-    title: 'Access Control',
+    title: "Access Control",
     description:
-      'Control who can access your files and folders with fine-grained permissions and management.',
+      "Control who can access your files and folders with fine-grained permissions and management.",
   },
   {
-    title: 'Collaboration',
+    title: "Collaboration",
     description:
-      'Collaborate with your team by sharing files, commenting, and tracking changes in real-time.',
+      "Collaborate with your team by sharing files, commenting, and tracking changes in real-time.",
   },
 ];
 
 const Slider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const nextSlide = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % sliderContent.length);
+  };
+
+  const prevSlide = () => {
+    setActiveIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + sliderContent.length) % sliderContent.length
+    );
+  };
+
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % sliderContent.length);
+      nextSlide();
     }, 3000);
 
     return () => clearInterval(intervalId);
@@ -32,17 +43,31 @@ const Slider = () => {
 
   return (
     <div className="slider-container">
-      <div
-        className="slider-wrapper"
-        style={{ transform: `translateX(${-activeIndex * 100}%)` }}
-      >
+      <button className="slider-arrow left" onClick={prevSlide}>
+        &lt;
+      </button>
+      <div className="slider-wrapper">
         {sliderContent.map((slide, index) => (
-          <div className="slider" key={index}>
-            <div><h1>{slide.title}</h1><br /></div>
-            <div><p>{slide.description}</p></div>
+          <div
+            className="slider"
+            key={index}
+            style={{
+              transform: `translateX(${-activeIndex * 100}%)`,
+            }}
+          >
+            <div>
+              <h1>{slide.title}</h1>
+              <br />
+            </div>
+            <div>
+              <p>{slide.description}</p>
+            </div>
           </div>
         ))}
       </div>
+      <button className="slider-arrow right" onClick={nextSlide}>
+        &gt;
+      </button>
     </div>
   );
 };

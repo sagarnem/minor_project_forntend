@@ -14,6 +14,7 @@ function Navbar() {
 
           <div className="nav-btn">
             <ul>
+              <CustomLink to="/">Home</CustomLink>
               <CustomLink to="/upload">Upload</CustomLink>
               <CustomLink to="/contact">Contact</CustomLink>
 
