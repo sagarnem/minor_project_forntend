@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./home.css";
 
+
 const sliderContent = [
   {
     title: "Secure file storage",
@@ -71,5 +72,7 @@ const Slider = () => {
     </div>
   );
 };
+
+
 
 export default Slider;

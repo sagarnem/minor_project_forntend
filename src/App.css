@@ -71,4 +71,23 @@ button:hover {
   font-size: small;
 }
 
+@media (min-width: 576px) {
+  /* For small devices and larger (e.g., tablets) */
+  .login-form, .register-form {
+    width: 80%;
+  }
+}
 
+@media (min-width: 768px) {
+  /* For medium devices and larger (e.g., small laptops) */
+  .login-form, .register-form {
+    width: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  /* For large devices and larger (e.g., desktops) */
+  .login-form, .register-form {
+    width: 50%;
+  }
+}

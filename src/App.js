@@ -7,7 +7,7 @@ import Home from "./Home";
 import Contact from "./Contact";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./nav";
-import PlanSection from "./Plans";
+
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
       
       </div>
 
-      <PlanSection />
+      
     </>
   );
 }

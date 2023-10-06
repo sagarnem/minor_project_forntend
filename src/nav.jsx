@@ -1,9 +1,15 @@
+import React, { useState } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import React from "react";
 import logo from "./logo.png";
-import "./index.css";
+import "./nav.css";
 
 function Navbar() {
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+
   return (
     <>
       <header>
@@ -13,11 +19,11 @@ function Navbar() {
           </Link>
 
           <div className="nav-btn">
-            <ul>
+            <div className="toggle-button" onClick={toggleMenu}></div>
+            <ul className={menuVisible ? "active" : ""}>
               <CustomLink to="/">Home</CustomLink>
               <CustomLink to="/upload">Upload</CustomLink>
               <CustomLink to="/contact">Contact</CustomLink>
-
               <CustomLink to="/login">Login</CustomLink>
               <CustomLink to="/signup">Signup</CustomLink>
             </ul>
@@ -28,6 +34,7 @@ function Navbar() {
     </>
   );
 }
+
 
 function CustomLink({ to, children, ...props }) {
   const resolvedPath = useResolvedPath(to);
